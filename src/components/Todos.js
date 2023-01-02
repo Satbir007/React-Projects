@@ -6,6 +6,7 @@ const Todos = () => {
  
   const handleChange = (event) =>{
      setTodo(event.target.value)
+
   };
 
   console.log("todo text", Todos);
@@ -19,8 +20,8 @@ const Todos = () => {
         />
         <button className="add-btn">Add</button>
     </div>
-  )
-}
+  );
+};
 
 export default Todos
 
