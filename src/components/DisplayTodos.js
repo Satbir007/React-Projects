@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { AnimatePresence, motion } from 'framer-motion';
 import {
   addTodos,
   removeTodos,
@@ -29,12 +30,13 @@ const DisplayTodos = (props) => {
   return (
     <div className="displaytodos">
       <div className="buttons">
-        <button onClick={() => setSort("active")}>Active</button>
-        <button onClick={() => setSort("completed")}>Completed</button>
-        <button onClick={() => setSort("all")}>All</button>
+        <motion.button  onClick={() => setSort("active")}>Active</motion.button>
+        <motion.button  onClick={() => setSort("completed")}>Completed</motion.button>
+        <motion.button  onClick={() => setSort("all")}>All</motion.button>
       </div>
       <ul>
-        {
+      <AnimatePresence>
+        { 
           props.todos.length > 0 && sort === "active" ? 
             
             props.todos.map((item) => {
@@ -93,7 +95,9 @@ const DisplayTodos = (props) => {
               );
             })
           : null
+          
         }
+        </AnimatePresence>
       </ul>
     </div>
   );
