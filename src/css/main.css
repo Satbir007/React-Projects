@@ -14,8 +14,8 @@ html {
 body {
   background: linear-gradient(
     190deg,
-    rgb(134, 123, 205) 0%,
-    rgb(106, 90, 171) 100%
+    rgb(15, 2, 86) 0%,
+    rgb(38, 9, 155) 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +37,11 @@ body {
   color: #e1ebfd;
 
   text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
+}
+
+#signInDiv{
+ text-align: center;
+ margin:auto;
 }
 
 .addTodos {

@@ -9,6 +9,7 @@ import {
 import TodoItem from "./TodoItem";
 import { AnimatePresence, motion } from "framer-motion";
 
+// This component will display the todo items
 const mapStateToProps = (state) => {
   return {
     todos: state,

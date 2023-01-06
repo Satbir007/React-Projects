@@ -4,6 +4,8 @@ import { addTodos } from "../redux/reducer";
 import { GoPlus } from "react-icons/go";
 import { motion } from "framer-motion";
 
+// This component will handle taking the inputs for todo list 
+
 const mapStateToProps = (state) => {
   return {
     todos: state,

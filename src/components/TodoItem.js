@@ -1,7 +1,8 @@
-import React, {useRef} from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import { FaEdit, FaCheckDouble, FaWindowClose } from "react-icons/fa";
 
+// This Component will handle the functionality of adding editing and deleting the todo list items 
 const TodoItem = (props) => {
   const { item, updateTodo, removeTodo, completeTodo } = props;
 
@@ -49,7 +50,7 @@ const TodoItem = (props) => {
           onClick={() => changeFocus()}
         >
           {" "}
-          <FaEdit/>{" "}
+          <FaEdit />{" "}
         </motion.button>
         {item.completed === false && (
           <motion.button
@@ -58,7 +59,7 @@ const TodoItem = (props) => {
             style={{ color: "green" }}
             onClick={() => completeTodo(item.id)}
           >
-            <FaCheckDouble/>
+            <FaCheckDouble />
           </motion.button>
         )}
         <motion.button
@@ -68,7 +69,7 @@ const TodoItem = (props) => {
           onClick={() => removeTodo(item.id)}
         >
           {" "}
-          <FaWindowClose/>
+          <FaWindowClose />
         </motion.button>{" "}
       </div>
       {item.completed && <span className="completed">done</span>}
@@ -77,6 +78,3 @@ const TodoItem = (props) => {
 };
 
 export default TodoItem;
-
-
-
