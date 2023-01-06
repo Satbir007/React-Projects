@@ -164,6 +164,19 @@ body {
   background-color: transparent;
 }
 
+.App .btn{
+    color: #271c6c;
+    width: 7rem;
+    height: 2.5rem; 
+    justify-content:center; 
+    margin: 20px auto;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
 .card .btns button:focus {
   outline: none;
 }
